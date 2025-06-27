@@ -22,3 +22,5 @@ GildedRose/bin/Debug/net8.0/GildedRose 10
 ``` cmd
 dotnet test
 ```
+## Tests are check to make sure they have full coverage
+![image](https://github.com/user-attachments/assets/69b989d3-1385-454b-bf2b-b34afb7a06f7)
