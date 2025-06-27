@@ -122,4 +122,34 @@ public class GildedRoseTest
         Assert.That(items[0].SellIn, Is.EqualTo(-1));
         Assert.That(items[0].Quality, Is.EqualTo(0));
     }
+
+    [Test]
+    public void ConjuredItem_DegradesTwiceAsFastBeforeSellDate()
+    {
+        var items = new List<Item> { ItemCreator("Conjured Mana Cake", 10, 20) };
+        var app = new GildedRose(items);
+        app.UpdateQuality();
+        Assert.That(items[0].SellIn, Is.EqualTo(9));
+        Assert.That(items[0].Quality, Is.EqualTo(18));
+    }
+
+    [Test]
+    public void ConjuredItem_DegradesTwiceAsFastAfterSellDate()
+    {
+        var items = new List<Item> { ItemCreator("Conjured Mana Cake", 0, 20) };
+        var app = new GildedRose(items);
+        app.UpdateQuality();
+        Assert.That(items[0].SellIn, Is.EqualTo(-1));
+        Assert.That(items[0].Quality, Is.EqualTo(16));
+    }
+
+    [Test]
+    public void ConjuredItem_QualityNeverNegative()
+    {
+        var items = new List<Item> { ItemCreator("Conjured Mana Cake", 5, 0) };
+        var app = new GildedRose(items);
+        app.UpdateQuality();
+        Assert.That(items[0].SellIn, Is.EqualTo(4));
+        Assert.That(items[0].Quality, Is.EqualTo(0));
+    }
 }
