@@ -213,7 +213,7 @@ var assemblies = [
   {
     "name": "GildedRose",
     "classes": [
-      { "name": "GildedRoseKata.GildedRose", "rp": "GildedRose_GildedRose.html", "cl": 71, "ucl": 0, "cal": 71, "tl": 89, "cb": 36, "tb": 36, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "GildedRoseKata.GildedRose", "rp": "GildedRose_GildedRose.html", "cl": 76, "ucl": 0, "cal": 76, "tl": 48, "cb": 54, "tb": 54, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "GildedRoseKata.Item", "rp": "GildedRose_Item.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "GildedRoseKata.Program", "rp": "GildedRose_Program.html", "cl": 48, "ucl": 0, "cal": 48, "tl": 61, "cb": 6, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
@@ -234,6 +234,12 @@ var riskHotspots = [
     "metrics": [
       { "value": 36, "exceeded": true },
       { "value": 36, "exceeded": true },
+    ]},
+  {
+    "assembly": "GildedRose", "class": "GildedRoseKata.GildedRose", "reportPath": "GildedRose_GildedRose.html", "methodName": "UpdateQuality()", "methodShortName": "UpdateQuality()", "fileIndex": 0, "line": 20,
+    "metrics": [
+      { "value": 20, "exceeded": false },
+      { "value": 20, "exceeded": true },
     ]},
 ];
 
